@@ -1,0 +1,79 @@
+:root {
+  --color-primary: #27ae60;
+  --color-primary-50: #93d7af;
+  --color-secondary: #eb5757;
+
+  --gray-100: #333333;
+  --gray-50: #828282;
+  --grey-20: #e0e0e0;
+  --grey-0: #f5f5f5;
+
+  --negative: #e60000;
+  --warning: #ffcd07;
+  --sucess: #168821;
+  --information: #155bcb;
+
+  --heading1: bold 26px;
+  --heading2: bold 22px;
+  --heading3: bold 18px;
+  --headline: 16px;
+  --body: 14px;
+  --body-600: bold 14px;
+  --caption: 12px;
+}
+
+h3 {
+  text-align: center;
+}
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+}
+.App__subTotal {
+  margin-top: 5em;
+  margin-bottom: 5em;
+  font-weight: bold;
+}
+.Search {
+  display: flex;
+  flex-direction: row;
+  margin: 2em;
+  width: 30%;
+}
+.MenuContainer {
+  color: black;
+  text-align: center;
+  justify-content: center;
+}
+.Menu {
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.CartContainer {
+  margin: 1em;
+  border: 2px solid black;
+  text-align: center;
+}
+.Cart {
+  text-align: left;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+.Cart__products {
+  margin: 2rem;
+}
+.btn {
+  background-color: rgb(77, 77, 233);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+}
