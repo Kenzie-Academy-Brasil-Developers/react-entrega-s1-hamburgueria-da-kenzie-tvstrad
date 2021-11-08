@@ -36,11 +36,12 @@ const MenuContainer = ({
         <div className="header__search">
           <input
             type="text"
+            placeholder="Search our menu"
             value={userInput}
             onChange={(event) => setUserInput(event.target.value)}
           />
-          <button className="btn" onClick={() => showProducts(userInput)}>
-            Filter
+          <button className="FindBtn" onClick={() => showProducts(userInput)}>
+            Search
           </button>
         </div>
       </header>

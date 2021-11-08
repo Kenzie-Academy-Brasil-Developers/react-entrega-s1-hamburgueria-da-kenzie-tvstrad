@@ -24,6 +24,7 @@
 
 .App {
   text-align: center;
+  font-family: "Inter", sans-serif;
 }
 
 .App-header {
@@ -34,4 +35,17 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.btn {
+  color: white;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 8px;
+  font-size: var(--headline);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--color-primary-50);
 }

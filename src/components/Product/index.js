@@ -10,7 +10,7 @@ const Product = ({ product, handleClick, currentSale }) => {
       <div className="product__info">
         <h3>{product.name}</h3>
         <p>{product.category}</p>
-        <p>R$ {product.price.toFixed(2)}</p>
+        <p className="product_price">R$ {product.price.toFixed(2)}</p>
         <button
           className="btn"
           onClick={() =>

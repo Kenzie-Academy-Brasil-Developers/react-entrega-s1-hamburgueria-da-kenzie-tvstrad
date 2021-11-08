@@ -9,8 +9,12 @@
     "t .";
   text-align: center;
   margin: 10px;
-  border: 2px solid var(--grey-50);
+  border: 2px solid var(--grey-20);
   border-radius: 8px;
+}
+.productContainer:focus {
+  scale: 1.1;
+  border: black;
 }
 img {
   height: 150px;
@@ -18,7 +22,7 @@ img {
 }
 .product__img {
   grid-area: i;
-  background-color: var(--grey-20);
+  background-color: var(--grey-0);
   width: 100%;
 }
 .product__info {
@@ -26,4 +30,15 @@ img {
   justify-items: center;
   text-align: left;
   margin-left: 20px;
+  font-family: "Inter", sans-serif;
+}
+.product__info h3 {
+  font-size: var(--heading3);
+}
+.product_price {
+  color: var(--color-primary);
+  font: var(--body-600);
+}
+.product_caption {
+  font: var(--caption);
 }

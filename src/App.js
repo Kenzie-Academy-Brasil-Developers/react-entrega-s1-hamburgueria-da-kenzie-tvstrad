@@ -41,7 +41,7 @@ function App() {
     },
     {
       id: 6,
-      name: "McShake Ovomaltine",
+      name: "McShake",
       category: "Bebidas",
       price: 4.99,
       img: "https://i.ibb.co/QNb3DJJ/milkshake-ovomaltine.png",
@@ -86,7 +86,7 @@ function App() {
     },
     {
       id: 6,
-      name: "McShake Ovomaltine",
+      name: "McShake",
       category: "Bebidas",
       price: 4.99,
       img: "https://i.ibb.co/QNb3DJJ/milkshake-ovomaltine.png",
