@@ -1,16 +1,20 @@
+import React from "react";
 import Product from "../Product";
+import Cart from "../Cart";
+import "./style.css";
 
 const MenuContainer = ({
   products,
   handleClick,
   currentSale,
+  setCurrentSale,
   handleCart,
   showProducts,
   userInput,
   setUserInput,
   filteredProducts,
 }) => {
-  const mapProducts = products.map((product) => {
+  const mapProducts = filteredProducts.map((product) => {
     return (
       <Product
         key={product.id}
@@ -22,46 +26,47 @@ const MenuContainer = ({
   });
   const cartProducts = currentSale.map((product) => {
     return (
-      <div className="Cart__products" key={product.id + 10}>
-        <h3>{product.name}</h3>
-        <p>{product.category}</p>
-        <p>{product.price}</p>
-        <button className="btn" onClick={() => handleCart(product.id)}>
-          {" "}
-          Remove
-        </button>
-      </div>
-    );
-  });
-  const searched = filteredProducts.map((product) => {
-    return (
-      <Product
-        key={product.id}
-        product={product}
-        handleClick={handleClick}
-        currentSale={currentSale}
-      />
+      <Cart key={product.id + 10} product={product} handleCart={handleCart} />
     );
   });
   return (
-    <div className="MenuContainer">
-      <h1>Menu</h1>
-
-      <div className="Menu">{mapProducts}</div>
-      <div className="Search">
-        <input
-          type="text"
-          value={userInput}
-          onChange={(event) => setUserInput(event.target.value)}
-        />
-        <button className="btn" onClick={() => showProducts(userInput)}>
-          Filter
-        </button>
+    <div className="container">
+      <header className="header">
+        <img className="header__img" src="../images/logo.png" alt="logo" />
+        <div className="header__search">
+          <input
+            type="text"
+            value={userInput}
+            onChange={(event) => setUserInput(event.target.value)}
+          />
+          <button className="btn" onClick={() => showProducts(userInput)}>
+            Filter
+          </button>
+        </div>
+      </header>
+      <div className="main">
+        <div className="productMenu">{mapProducts}</div>
       </div>
-      <div>{searched}</div>
-      <div className="CartContainer">
-        <h3>Shopping Cart</h3>
-        <div className="Cart">{cartProducts}</div>
+      <div className="aside">
+        <div className="cart">
+          <div className="cart__header">
+            <p>Shopping Cart</p>
+          </div>
+
+          <div>{cartProducts}</div>
+
+          <div className="cart__footer">
+            <p>Total</p>
+            <p>
+              R$
+              {currentSale
+                .reduce((acc, crr) => {
+                  return acc + crr.price;
+                }, 0)
+                .toFixed(2)}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

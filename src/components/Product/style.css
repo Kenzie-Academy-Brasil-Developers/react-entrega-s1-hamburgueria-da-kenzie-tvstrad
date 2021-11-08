@@ -1,0 +1,29 @@
+.productContainer {
+  width: 300px;
+  height: 346px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3fr 7fr;
+  grid-template-areas:
+    "i i"
+    "t .";
+  text-align: center;
+  margin: 10px;
+  border: 2px solid var(--grey-50);
+  border-radius: 8px;
+}
+img {
+  height: 150px;
+  max-width: 150px;
+}
+.product__img {
+  grid-area: i;
+  background-color: var(--grey-20);
+  width: 100%;
+}
+.product__info {
+  grid-area: t;
+  justify-items: center;
+  text-align: left;
+  margin-left: 20px;
+}
