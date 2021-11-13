@@ -107,8 +107,9 @@ function App() {
 
   const handleClick = (productId) => {
     const found = products.find((element) => element.id === productId);
-
-    setCurrentSale([...currentSale, found]);
+    currentSale.includes(found)
+      ? alert("This item has alredy been added to cart.")
+      : setCurrentSale([...currentSale, found]);
   };
 
   const handleCart = (productId) => {

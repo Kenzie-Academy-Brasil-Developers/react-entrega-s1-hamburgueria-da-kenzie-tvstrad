@@ -10,12 +10,35 @@
   background-color: var(--grey-20);
   border-radius: 8px;
 }
+.cartContainer__info {
+  margin: 0px;
+  text-align: start;
+  width: 100%;
+  margin: 0 10px;
+}
+h3.cartContainer__info {
+  font: var(--heading3);
+  font-family: var(--font);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 40px;
+}
+p.cartContainer__info {
+  font: var(--heading3);
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 12px;
+  text-align: left;
+}
 .removeBtn {
   border: none;
   background-color: transparent;
   cursor: pointer;
   text-align: start;
+  height: 30px;
+  color: #bdbdbd;
 }
 .removeBtn:hover {
   text-decoration: underline;
+  color: var(--grey-100);
 }

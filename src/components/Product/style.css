@@ -1,6 +1,7 @@
 .productContainer {
   width: 300px;
   height: 346px;
+  min-width: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 3fr 7fr;
@@ -8,7 +9,7 @@
     "i i"
     "t .";
   text-align: center;
-  margin: 10px;
+  margin: 5px;
   border: 2px solid var(--grey-20);
   border-radius: 8px;
 }
@@ -30,15 +31,25 @@ img {
   justify-items: center;
   text-align: left;
   margin-left: 20px;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font);
 }
-.product__info h3 {
-  font-size: var(--heading3);
+h3.product__info {
+  font: var(--heading3);
+  font-family: var(--font);
+  font-weight: 700;
+  margin-left: 0;
 }
+p.product__info {
+  font-size: 12px;
+  font-family: var(--font);
+  font-weight: 400;
+  color: var(--grey-50);
+  margin-left: 0;
+}
+
 .product_price {
   color: var(--color-primary);
   font: var(--body-600);
-}
-.product_caption {
-  font: var(--caption);
+  font-family: var(--font);
+  font-weight: 600;
 }

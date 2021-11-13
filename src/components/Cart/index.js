@@ -9,9 +9,9 @@ const Cart = ({ product, handleCart }) => {
         src={product.img}
         alt={`Imagem de um ${product.name}`}
       />
-      <div>
-        <p>{product.name}</p>
-        <p>{product.category}</p>
+      <div className="cartContainer__info">
+        <h3 className="cartContainer__info">{product.name}</h3>
+        <p className="cartContainer__info">{product.category}</p>
       </div>
       <button className="removeBtn" onClick={() => handleCart(product.id)}>
         Remove
