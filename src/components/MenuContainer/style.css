@@ -14,7 +14,6 @@
   align-items: center;
 }
 .header__img {
-  margin-top: 32px;
   height: 22.85px;
   width: 150px;
 }
@@ -200,7 +199,6 @@ p.emptyCartContainer__info {
   }
   .header__img {
     margin-left: 60px;
-    margin-top: 32px;
     height: 22.85px;
     width: 150px;
   }
