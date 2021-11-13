@@ -53,7 +53,13 @@ const MenuContainer = ({
         </div>
       </header>
       <div className="main">
-        <div className="productMenu">{mapProducts}</div>
+        {mapProducts.length > 0 ? (
+          <div className="productMenu">{mapProducts}</div>
+        ) : (
+          <div className="productMenu">
+            <h1 className="warning">Product currently unavailable </h1>
+          </div>
+        )}
       </div>
       <div className="aside">
         <div className="cart">

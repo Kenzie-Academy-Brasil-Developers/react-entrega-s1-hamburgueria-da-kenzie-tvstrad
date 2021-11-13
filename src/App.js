@@ -101,7 +101,9 @@ function App() {
     input.length === 0
       ? setFilteredProducts(products)
       : setFilteredProducts(
-          products.filter((element) => element.name === input)
+          products.filter(
+            (element) => element.name.toLowerCase() === input.toLowerCase()
+          )
         );
   };
 
