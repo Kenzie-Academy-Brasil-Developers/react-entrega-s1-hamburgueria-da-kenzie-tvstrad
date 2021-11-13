@@ -57,7 +57,10 @@ const MenuContainer = ({
           <div className="productMenu">{mapProducts}</div>
         ) : (
           <div className="productMenu">
-            <h1 className="warning">Product currently unavailable </h1>
+            <div className="warning">
+              <h1>The product "{userInput}" is currently unavailable.</h1>
+              <p> Please try searching for another product</p>
+            </div>
           </div>
         )}
       </div>
